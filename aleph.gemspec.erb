@@ -1,0 +1,21 @@
+<% require "./lib/aleph" -%>
+Gem::Specification.new do |s|
+  s.name              = "aleph"
+  s.version           = "<%= Aleph::VERSION %>"
+  s.summary           = "Literate-programming HTML"
+  s.authors           = ["Damian Janowski", "Michel Martens"]
+  s.email             = ["djanowski@dimaion.com", "michel@soveran.com"]
+  s.homepage          = "http://github.com/djanowski/aleph"
+
+  s.files = <%= Dir[
+    "LICENSE",
+    "README.markdown",
+    "Rakefile",
+    "lib/**/*.rb",
+    "*.gemspec",
+    "test/*.*"
+  ].inspect %>
+
+  s.add_dependency "nokogiri", "~> 1.4"
+  s.add_dependency "rdiscount", "~> 1.6"
+end
